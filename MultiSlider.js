@@ -31,6 +31,7 @@ export default class MultiSlider extends React.Component {
       borderRadius: 15,
       slipDisplacement: 200,
     },
+    markerHitSlop: undefined,
     customMarker: DefaultMarker,
     customMarkerLeft: DefaultMarker,
     customMarkerRight: DefaultMarker,
@@ -599,6 +600,7 @@ export default class MultiSlider extends React.Component {
                   currentValue={this.state.valueOne}
                   valuePrefix={this.props.valuePrefix}
                   valueSuffix={this.props.valueSuffix}
+                  hitSlop={this.props.markerHitSlop}
                 />
               ) : (
                 <MarkerLeft
@@ -610,6 +612,7 @@ export default class MultiSlider extends React.Component {
                   currentValue={this.state.valueOne}
                   valuePrefix={this.props.valuePrefix}
                   valueSuffix={this.props.valueSuffix}
+                  hitSlop={this.props.markerHitSlop}
                 />
               )}
             </View>
@@ -637,6 +640,7 @@ export default class MultiSlider extends React.Component {
                     enabled={this.props.enabledTwo}
                     valuePrefix={this.props.valuePrefix}
                     valueSuffix={this.props.valueSuffix}
+                    hitSlop={this.props.markerHitSlop}
                   />
                 ) : (
                   <MarkerRight
@@ -648,6 +652,7 @@ export default class MultiSlider extends React.Component {
                     enabled={this.props.enabledTwo}
                     valuePrefix={this.props.valuePrefix}
                     valueSuffix={this.props.valueSuffix}
+                    hitSlop={this.props.markerHitSlop}
                   />
                 )}
               </View>

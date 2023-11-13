@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 import * as React from "react";
-import { ViewStyle } from "react-native";
+import { Insets, ViewStyle } from "react-native";
 
 
 export interface StepsAsProps {
@@ -22,6 +22,7 @@ export interface MarkerProps {
     currentValue: number;
     valuePrefix: string;
     valueSuffix: string;
+    hitSlop?: Insets | undefined;
 }
 
 export interface LabelProps {
@@ -49,6 +50,7 @@ export interface MultiSliderProps {
         borderRadius: number;
         slipDisplacement: number;
     };
+    markerHitSlop?: Insets | undefined;
 
     customMarker?: React.ComponentType<MarkerProps>;
     customMarkerLeft?: React.ComponentType<MarkerProps>;

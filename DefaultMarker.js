@@ -4,7 +4,7 @@ import { View, StyleSheet, Platform, TouchableHighlight } from 'react-native';
 class DefaultMarker extends React.Component {
   render() {
     return (
-      <TouchableHighlight>
+      <TouchableHighlight hitSlop={this.props.hitSlop}>
         <View
           style={
             this.props.enabled
